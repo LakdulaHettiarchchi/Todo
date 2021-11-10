@@ -1,0 +1,66 @@
+.container{
+
+width: 300px;
+margin: 0 auto;
+
+}
+
+.todo-list > li{
+
+    margin-top: 5px;
+}
+
+.todo-list > li >div{
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+
+}
+
+.todo-list button{
+  
+    margin-left: 5px;
+
+
+
+}
+
+.todo-form{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.todo-form{
+
+    width: 100%;
+}
+
+.h1{
+
+    padding-left: 50px;
+}
+
+.btn-circle.btn-sm {
+    width: 45px;
+    height: 45px;
+    padding: 9px, 9px, 12px, 9px;
+    border-radius: 45px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.form-control{
+
+    border-right-style:none;
+    border-top-style:none;
+    border-left-style:none;
+    border-bottom: solid;
+   
+       
+    
+}

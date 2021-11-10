@@ -1,0 +1,59 @@
+ <div><img src="../../assets/todo.jpg" class="img1" alt="cinque terre">
+
+<div class="container">
+
+  <h1 class="h1">To Do List</h1>
+
+  <form class="todo-form" #f ="ngForm" (ngSubmit)= "onSubmit(f)">
+ 
+     <input type="text" class="form-control" id="title" name = "title" ngModel><br>
+   
+    <div>
+     <button type= "submit" class ="btn btn-warning btn-circle btn-sm"><i class="bi bi-plus-lg"></i></button><br>
+    </div>
+   
+
+  </form>
+
+  <ul style="list-style: none;" class="todo-list">
+
+    <li *ngFor="let todo of todos">
+      <div  *ngIf = "!this.todo.iscomplte" > 
+        <div> {{this.todo.title}}</div>
+        <div>
+
+          <button (click)="onComplte(this.todo.id)"  type="button" class="btn btn-success btn-circle btn-sm"><i class="bi bi-check-lg"></i></button>&nbsp;
+          <button (click)="onDelete(this.todo.id)" class = "b2" type="button" class="btn btn-primary btn-circle btn-sm"><i class="bi bi-x"></i></button>
+
+
+
+        </div>
+      </div>
+    </li>
+<br>
+<br>
+
+<h5>Completed List</h5>
+
+<li *ngFor="let todo of todos">
+  <div  *ngIf = "this.todo.iscomplte">
+    <div> {{this.todo.title}}</div>
+    <div>
+
+       <!-- <button (click)="onComplte(this.todo.id)" type="button" class="btn btn-danger btn-floating"><i class="bi bi-journal-check"></i></button>&nbsp; -->
+      <button (click)="onDelete(this.todo.id)" type="button" class="btn btn-primary btn-circle btn-sm"><i class="bi bi-x"></i></button>
+
+
+
+    </div>
+  </div>
+</li>
+
+
+
+
+  </ul>
+
+</div>
+
+</div>
